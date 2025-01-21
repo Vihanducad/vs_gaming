@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, black, #003366);
+    color: #f0f0f0;
+    line-height: 1.6;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #003366;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.active nav ul li a:hover {
+    background-color: #0055cc;
+    color: #fff;
+    border-radius: 5px;
+}
+
+nav ul li a.action{
+    color: #1e90ff;
+}
+
+footer{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 200px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #00bfff;
+}
+
+.faq-item {
+    margin: 10px 0;
+    border-bottom: 1px solid #444;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-Q {
+    padding: 15px;
+    background-color: #1e1e1e;
+    cursor: pointer;
+    font-weight: bold;
+    color: #00bfff;
+}
+
+.faq-A {
+    max-height: 0;
+    overflow: hidden;
+    padding:0px;
+    background-color: #292929;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item:hover .faq-A {
+    max-height: 200px;
+    padding: 20px;
+}
+
+.query-form {
+    padding: 50px 30px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    width: 700px;
+    margin-top: 20px;
+}
+
+.query-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0055cc;
+}
+
+.query-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.query-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.query-form input,
+.query-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+.query-form button {
+    padding: 10px;
+    background-color: #0055cc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.query-form button:hover {
+    background-color: #1e1e1e;
+}
+#message {
+    margin-bottom: 20px;
+}
+form {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 10px 0;
+    }
+    .faq-container {
+        padding: 10px;
+    }
+    .faq-Q {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .faq-A {
+        font-size: 14px;
+        padding: 0px;
+    }
+}

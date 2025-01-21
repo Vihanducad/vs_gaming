@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, black, #003366);
+    color: #f0f0f0;
+    line-height: 1.6;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #003366;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.active nav ul li a:hover {
+    background-color: #0055cc;
+    color: #fff;
+    border-radius: 5px;
+}
+
+nav ul li a.action{
+    color: #1e90ff;
+}
+
+main{
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #1e90ff;
+}
+
+.game-card {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-image {
+    position: relative;
+    width: 589px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-details {
+    padding: 20px;
+}
+
+.game-details h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.game-description {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+.game-details:hover .game-description {
+    display: block;
+}
+
+.game-meta {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.game-meta p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .game-card{
+        flex-wrap: wrap;
+    }
+    .game-image{
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 10px 0;
+    }
+}
